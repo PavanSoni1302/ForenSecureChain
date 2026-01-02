@@ -1,0 +1,27 @@
+<Sysmon schemaversion="4.50">
+  <HashAlgorithms>SHA256</HashAlgorithms>
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ProcessCreate onmatch="exclude">
+        <Image condition="begin with">C:\Windows\System32\svchost.exe</Image>
+        <Image condition="is">C:\Windows\System32\taskhostw.exe</Image>
+      </ProcessCreate>
+    </RuleGroup>
+
+    <RuleGroup name="" groupRelation="or">
+      <NetworkConnect onmatch="include">
+        <Image condition="image">certutil.exe</Image>
+        <Image condition="image">powershell.exe</Image>
+        <Image condition="image">cmd.exe</Image>
+      </NetworkConnect>
+    </RuleGroup>
+
+    <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="include">
+        <TargetFilename condition="end with">.exe</TargetFilename>
+        <TargetFilename condition="end with">.ps1</TargetFilename>
+        <TargetFilename condition="end with">.bat</TargetFilename>
+      </FileCreate>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
