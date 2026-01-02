@@ -1,0 +1,2 @@
+{"attributes":{"allowHidden":false,"fieldAttrs":"{}","fieldFormatMap":"{}","fields":"[]","name":"winlogbeat","runtimeFieldMap":"{}","sourceFilters":"[]","timeFieldName":"@timestamp","title":"winlogbeat*"},"coreMigrationVersion":"8.8.0","created_at":"2025-12-24T07:09:58.928Z","id":"f77d3dfa-0a45-4342-8bd8-15c815c8dc6a","managed":false,"references":[],"type":"index-pattern","typeMigrationVersion":"8.0.0","updated_at":"2025-12-24T07:09:58.928Z","version":"WzUsMl0="}
+{"excludedObjects":[],"excludedObjectsCount":0,"exportedCount":1,"missingRefCount":0,"missingReferences":[]}
